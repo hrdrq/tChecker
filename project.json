@@ -1,0 +1,8 @@
+{
+  "name": "taaze",
+  "description": "taaze",
+  "memory": 128,
+  "timeout": 5,
+  "role": "arn:aws:iam::333179458584:role/nedan_lambda_function",
+  "environment": {}
+}

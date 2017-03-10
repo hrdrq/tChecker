@@ -1,0 +1,9 @@
+{
+  "description": "Example with python",
+  "timeout": 300,
+  "environment": {
+    "TESSDATA_PREFIX": "/var/task"
+  },
+  "hooks":{
+  }
+}
