@@ -57,10 +57,6 @@ class Taaze(object):
                     'no': TAAZE_ACCOUNT, 'password': TAAZE_PW, 'validateCode': captcha})
 
     def query(self, isbn):
-        # cookies_dict = requests.utils.dict_from_cookiejar(self.s.cookies)
-        # cookies = requests.utils.cookiejar_from_dict(cookies_dict)
-        # res = requests.get(QUERY_URL, params={
-        #                    "isbn": isbn}, cookies=cookies).json()[0]
         res = self.s.get(QUERY_URL, params={"isbn": isbn}).json()[0]
 
         result = {
@@ -73,12 +69,6 @@ class Taaze(object):
         if result['flag'] == 'Y':
             self.result.append(result)
         return result
-
-    # def get_isbn(self):
-    #     res = self.sql.query(TableTaaze.isbn)\
-    #         .filter(TableTaaze.active == True)\
-    #         .all()
-    #     return [r[0] for r in res]
 
 
 def handle(event, context):
